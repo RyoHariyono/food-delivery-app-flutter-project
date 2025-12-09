@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "Style",
         "Auth system",
-        "Navigation pages"
+        "Navigation pages",
+        "Homepage"
     ]
 }
