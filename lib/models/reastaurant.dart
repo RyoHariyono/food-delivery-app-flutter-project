@@ -12,7 +12,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/burgers/cheese_burger.png",
       price: 0.99,
       category: FoodCategory.burgers,
-      availabelAddons: [
+      availableAddons: [
         Addon(name: "extra cheese", price: 0.99),
         Addon(name: "bacon", price: 1.99),
         Addon(name: "Avocado", price: 2.99),
@@ -25,7 +25,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/burgers/aloha_burger.png",
       price: 2.99,
       category: FoodCategory.burgers,
-      availabelAddons: [
+      availableAddons: [
         Addon(name: "extra pinnaple", price: 2.00),
         Addon(name: "mushrooms", price: 1.99),
         Addon(name: "Avocado", price: 2.99),
@@ -38,7 +38,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/burgers/bbq_burger.png",
       price: 1.00,
       category: FoodCategory.burgers,
-      availabelAddons: [
+      availableAddons: [
         Addon(name: "bacon", price: 2.99),
         Addon(name: "more bbq", price: 2.99),
       ],
@@ -50,7 +50,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/burgers/bluemoon_burger.png",
       price: 0.99,
       category: FoodCategory.burgers,
-      availabelAddons: [
+      availableAddons: [
         Addon(name: "extra blue cheese", price: 0.99),
         Addon(name: "fries", price: 1.99),
         Addon(name: "onion rings", price: 2.99),
@@ -63,7 +63,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/burgers/vega_burger.png",
       price: 0.99,
       category: FoodCategory.burgers,
-      availabelAddons: [Addon(name: "extra vega cheese", price: 0.99)],
+      availableAddons: [Addon(name: "extra vega cheese", price: 0.99)],
     ),
 
     // desserts
@@ -74,7 +74,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/desserts/frozen_yogurt_dessert.png",
       price: 1.99,
       category: FoodCategory.desserts,
-      availabelAddons: [Addon(name: "extra topping", price: 0.49)],
+      availableAddons: [Addon(name: "extra topping", price: 0.49)],
     ),
     Food(
       name: "Ice Cream",
@@ -82,7 +82,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/desserts/ice_cream_dessert.png",
       price: 1.79,
       category: FoodCategory.desserts,
-      availabelAddons: [Addon(name: "wafer stick", price: 0.39)],
+      availableAddons: [Addon(name: "wafer stick", price: 0.39)],
     ),
     Food(
       name: "Marshmallows",
@@ -90,7 +90,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/desserts/marshmallows_dessert.png",
       price: 1.29,
       category: FoodCategory.desserts,
-      availabelAddons: [Addon(name: "chocolate dip", price: 0.59)],
+      availableAddons: [Addon(name: "chocolate dip", price: 0.59)],
     ),
     Food(
       name: "Pastry",
@@ -98,15 +98,15 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/desserts/pastry_dessert.png",
       price: 2.49,
       category: FoodCategory.desserts,
-      availabelAddons: [Addon(name: "extra filling", price: 0.79)],
+      availableAddons: [Addon(name: "extra filling", price: 0.79)],
     ),
     Food(
       name: "Pumpkin Pie",
       description: "Classic pumpkin pie with warm spices and creamy filling.",
-      imagePath: "lib/images/desserts/pumkin_pie_dessert.png",
+      imagePath: "lib/images/desserts/pumpkin_pie_dessert.png",
       price: 2.99,
       category: FoodCategory.desserts,
-      availabelAddons: [Addon(name: "whipped cream", price: 0.59)],
+      availableAddons: [Addon(name: "whipped cream", price: 0.59)],
     ),
 
     // drinks
@@ -116,7 +116,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/drinks/alcohol_drink.png",
       price: 3.99,
       category: FoodCategory.drinks,
-      availabelAddons: [Addon(name: "extra ice", price: 0.29)],
+      availableAddons: [Addon(name: "extra ice", price: 0.29)],
     ),
     Food(
       name: "Bottled Water",
@@ -124,7 +124,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/drinks/bottled_water_drink.png",
       price: 0.99,
       category: FoodCategory.drinks,
-      availabelAddons: [Addon(name: "lemon slice", price: 0.19)],
+      availableAddons: [Addon(name: "lemon slice", price: 0.19)],
     ),
     Food(
       name: "Coffee",
@@ -132,7 +132,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/drinks/coffe_drink.png",
       price: 1.49,
       category: FoodCategory.drinks,
-      availabelAddons: [Addon(name: "extra sugar", price: 0.19)],
+      availableAddons: [Addon(name: "extra sugar", price: 0.19)],
     ),
     Food(
       name: "Energy Drink",
@@ -140,7 +140,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/drinks/energy_drink.png",
       price: 2.29,
       category: FoodCategory.drinks,
-      availabelAddons: [Addon(name: "extra ice", price: 0.29)],
+      availableAddons: [Addon(name: "extra ice", price: 0.29)],
     ),
     Food(
       name: "Soft Drink",
@@ -148,7 +148,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/drinks/soft_drink.png",
       price: 1.19,
       category: FoodCategory.drinks,
-      availabelAddons: [Addon(name: "large size", price: 0.49)],
+      availableAddons: [Addon(name: "large size", price: 0.49)],
     ),
 
     //salads
@@ -158,7 +158,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/salads/caprese_salad.png",
       price: 3.49,
       category: FoodCategory.salads,
-      availabelAddons: [Addon(name: "extra mozzarella", price: 0.79)],
+      availableAddons: [Addon(name: "extra mozzarella", price: 0.79)],
     ),
     Food(
       name: "Caesar Salad",
@@ -166,7 +166,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/salads/ceasar_salad.png",
       price: 3.79,
       category: FoodCategory.salads,
-      availabelAddons: [Addon(name: "grilled chicken", price: 1.49)],
+      availableAddons: [Addon(name: "grilled chicken", price: 1.49)],
     ),
     Food(
       name: "Chef Salad",
@@ -174,7 +174,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/salads/chef_salad.png",
       price: 4.29,
       category: FoodCategory.salads,
-      availabelAddons: [Addon(name: "extra egg", price: 0.59)],
+      availableAddons: [Addon(name: "extra egg", price: 0.59)],
     ),
     Food(
       name: "Cobb Salad",
@@ -182,7 +182,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/salads/cobb_salad.png",
       price: 4.79,
       category: FoodCategory.salads,
-      availabelAddons: [Addon(name: "extra avocado", price: 0.89)],
+      availableAddons: [Addon(name: "extra avocado", price: 0.89)],
     ),
     Food(
       name: "Crab Louie Salad",
@@ -190,7 +190,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/salads/crab_louie_salad.png",
       price: 5.49,
       category: FoodCategory.salads,
-      availabelAddons: [Addon(name: "extra crab", price: 1.99)],
+      availableAddons: [Addon(name: "extra crab", price: 1.99)],
     ),
 
     //sides
@@ -200,7 +200,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/sides/garlic_bread_side.png",
       price: 1.49,
       category: FoodCategory.sides,
-      availabelAddons: [Addon(name: "extra cheese", price: 0.49)],
+      availableAddons: [Addon(name: "extra cheese", price: 0.49)],
     ),
     Food(
       name: "Loaded Fries",
@@ -208,7 +208,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/sides/loaded_fries_side.png",
       price: 2.99,
       category: FoodCategory.sides,
-      availabelAddons: [Addon(name: "extra sauce", price: 0.59)],
+      availableAddons: [Addon(name: "extra sauce", price: 0.59)],
     ),
     Food(
       name: "Mac & Cheese",
@@ -216,7 +216,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/sides/mac_side.png",
       price: 2.79,
       category: FoodCategory.sides,
-      availabelAddons: [Addon(name: "extra cheese", price: 0.69)],
+      availableAddons: [Addon(name: "extra cheese", price: 0.69)],
     ),
     Food(
       name: "Onion Rings",
@@ -224,7 +224,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/sides/onion_rings_sides.png",
       price: 2.49,
       category: FoodCategory.sides,
-      availabelAddons: [Addon(name: "bbq sauce", price: 0.39)],
+      availableAddons: [Addon(name: "bbq sauce", price: 0.39)],
     ),
     Food(
       name: "Sweet Potato Fries",
@@ -232,7 +232,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: "lib/images/sides/sweet_potato_side.png",
       price: 2.69,
       category: FoodCategory.sides,
-      availabelAddons: [Addon(name: "cheese dip", price: 0.59)],
+      availableAddons: [Addon(name: "cheese dip", price: 0.59)],
     ),
   ];
 
