@@ -224,7 +224,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Onion Rings",
       description: "Golden fried onion rings, crispy and delicious.",
-      imagePath: "lib/images/sides/onion_rings_sides.png",
+      imagePath: "lib/images/sides/onion_rings_side.png",
       price: 2.49,
       category: FoodCategory.sides,
       availableAddons: [Addon(name: "bbq sauce", price: 0.39)],
@@ -244,6 +244,7 @@ class Restaurant extends ChangeNotifier {
   */
 
   List<Food> get menu => _menu;
+  List<CartItem> get cart => _cart;
 
   /*
   operations
