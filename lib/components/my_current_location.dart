@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/models/reastaurant.dart';
+import 'package:provider/provider.dart';
 
 class MyCurrentLocation extends StatelessWidget {
   const MyCurrentLocation({super.key});
@@ -9,18 +11,27 @@ class MyCurrentLocation extends StatelessWidget {
       builder: (context) => AlertDialog(
         title: Text("Your location"),
         content: const TextField(
-          decoration: InputDecoration(hintText: "Search address.."),
+          decoration: InputDecoration(hintText: "Enter address"),
         ),
         actions: [
           // cancel button
           MaterialButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              Navigator.pop(context);
+              textController.clear();
+            },
             child: const Text("Cancel"),
           ),
 
           // save button
           MaterialButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              // update delivery address
+              String newAddress = textController.text;
+              context.read<Restaurant>().updateDeliveryAddress(newAddress);
+              Navigator.pop(context);
+              textController.clear();
+            },
             child: const Text("Save"),
           ),
         ],
@@ -44,11 +55,13 @@ class MyCurrentLocation extends StatelessWidget {
             child: Row(
               children: [
                 // address
-                Text(
-                  "123 Main St",
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.inversePrimary,
-                    fontWeight: FontWeight.bold,
+                Consumer<Restaurant>(
+                  builder: (context, restaurant, child) => Text(
+                    restaurant.deliveryAddress,
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
 
