@@ -53,40 +53,27 @@ class CartPage extends StatelessWidget {
               ),
             ],
           ),
-          body: Column(
-            children: [
-              // list of cart
-              Expanded(
-                child: Column(
-                  children: [
-                    userCart.isEmpty
-                        ? Expanded(child: Center(child: Text("Cart is empty")))
-                        : Expanded(
-                            child: ListView.builder(
-                              itemCount: userCart.length,
-                              itemBuilder: (context, index) {
-                                // get individual cart item
-                                final cartItem = userCart[index];
+          body: userCart.isEmpty
+              ? Center(child: Text("Cart is empty"))
+              : ListView.builder(
+                  itemCount: userCart.length,
+                  itemBuilder: (context, index) {
+                    // get individual cart item
+                    final cartItem = userCart[index];
 
-                                //  return cart tile ui
-                                return MyCartTile(cartItem: cartItem);
-                              },
-                            ),
-                          ),
-                  ],
+                    //  return cart tile ui
+                    return MyCartTile(cartItem: cartItem);
+                  },
                 ),
+          bottomNavigationBar: Padding(
+            padding: EdgeInsetsGeometry.fromLTRB(0, 25, 0, 25),
+            child: MyButton(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const PaymentPage()),
               ),
-
-              // button to pay
-              MyButton(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const PaymentPage()),
-                ),
-                text: "Go to checkout",
-              ),
-              const SizedBox(height: 25),
-            ],
+              text: "Go to checkout",
+            ),
           ),
         );
       },
